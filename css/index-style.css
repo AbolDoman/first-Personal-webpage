@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+#body{
+    font-family: Caveat, serif;
+    font-weight: bold;
+    width: 100%;
+    overflow-x: hidden;
+}
+#main{
+    margin-right: 0;
+    margin-left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right,#534D45,black);
+}
+nav{
+    background-color: transparent;
+    position: relative;
+}
+nav a{
+    color: black;
+    transition: all ease 1s;
+    position: relative;
+    transform: skewX(-20deg);
+    overflow: hidden;
+}
+nav a:before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 17%;
+    width: 300%;
+    height: 100%;
+    background-color: #804452;
+    z-index: -1;
+    transform: skewX(-20deg) scaleY(0) translateX(-30px);
+    transform-origin: top;
+    transition: all ease 0.5s;
+}
+nav a:hover:before{
+    transform: skewX(-20deg) scaleY(1) translateX(-30px);
+}
+nav a:hover{
+    border: 0;
+    color: white;
+}
+
+#s-label{
+    font-size: 1.4em;
+}
+#s-box{
+    display: none;
+    outline: none;
+    border: none;
+    width: 240px;
+    background-color: #4E4941;
+}
+.fa-search{
+    color: darkgrey;
+    transition: all ease 1s;
+}
+.fa-search:hover{
+    text-decoration: none;
+    color: white;
+}
+#main-pic{
+    background-image: url("../img/img11.png");
+    background-size: 120% 120%;
+}
+#main-caption{
+    font-family: "Colonna MT", serif;
+    font-weight: bold;
+    text-align: center;
+}
+#main-caption h1{
+    font-size: 5em;
+    margin-top: 100px;
+    color: white;
+}
+#main-caption h2{
+    margin-top: 40px;
+    color: white;
+    overflow: hidden;
+    animation: typing 4s steps(18) infinite;
+    position: relative;
+    left: 200px;
+}
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 18ch;
+    }
+    100%{
+        width: 0;
+    }
+}
+#social-media span{
+    font-size: 1.5em;
+    color: darkgrey;
+    margin-right: 5px;
+}
+#social-media span:hover{
+    color: white;
+}
+#social-media{
+    margin-top: 20px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+#social-media a,span{
+    margin-top: 10px;
+}
+.active-1{
+    background-color: #341922;
+    color: antiquewhite;
+}
+#logo{
+    position: absolute;
+    z-index: 99;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    width: 100%;
+    overflow: hidden;
+}
+html{
+    box-sizing: border-box;
+}
+*,
+*:after,
+*:before{
+    box-sizing:inherit;
+}
+main{
+    height: 100vh;
+    overflow-y: auto;
+    perspective: 1px;
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    color: black; !important;
+}
+section{
+    padding: 3em;
+}
+h1{
+    font-size: 2.2em;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.has-parallax{
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+}
+.has-parallax::before{
+    opacity: 25%;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-position: center bottom;
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+
+}
+.sky1::before{
+    background-image: url("../img/img3.jpg");
+}
+.must{
+    position: absolute;
+    left: 400px;
+    color: darkred;
+    font-weight: bold;
+    display: none;
+}
+#back{
+    position: fixed;
+    top: 20px;
+    right: 40px;
+}
+#imoji{
+    width: 109px;
+    height: 109px;
+    background-image: url("../img/imoji.png");
+    border-radius: 50%;
+    background-position-x: -3px;
+    background-position-y: -1.5px;
+    transition: all 1s ease;
+    margin-left: 40px;
+}
+
+#slider{
+    width: 200px;
+    background-color: darkgreen;
+}
+#sl p{
+    width: 200px;
+    text-align: center;
+}
+.wrapper{
+    margin-left: 400px;
+    position: relative;
+    top: 10px;
+}
+.container2{
+    background: linear-gradient(to right,blueviolet,orange);
+    color: black;
+    font-weight: bold;
+    height: 210px;
+}

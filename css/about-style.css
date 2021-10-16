@@ -1,0 +1,447 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    width: 100%;
+    overflow-x: hidden;
+}
+.fill{
+    background-color: transparent;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+nav ul li a:hover {
+    color: #555;
+}
+
+nav.fill ul li a {
+    position: relative;
+}
+nav.fill ul li a:after {
+    border-radius: 20% 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: linear-gradient(to top,black,blueviolet,white) !important;
+    height: 1px;
+}
+
+nav.fill ul li a {
+    transition: all 2s;
+}
+nav.fill ul li a:hover {
+    color: white !important;
+    z-index: 1;
+}
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+.back-to-home a{
+    color: #1F1F17 !important;
+}
+/* Keyframes */
+@-webkit-keyframes fill {
+    0% {
+        width: 0;
+        height: 1px;
+    }
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: #333;
+    }
+}
+#sec1{
+    background-image: url("../img/img61.png");
+    background-size: cover;
+}
+#col-6-1{
+    overflow-x: hidden;
+}
+#my-pic{
+    height: 500px;
+    width: 550px;
+    margin: 50px;
+    margin-top: 70px !important;
+    border: 3px solid black;
+    border-radius: 70px 0 70px 0;
+    box-shadow: -10px 10px 30px black;
+}
+#mask{
+    position: absolute;
+    top: 0;
+    height: 500px;
+    width: 550px;
+    margin: 50px;
+    margin-top: 70px !important;
+    border: 3px solid black;
+    border-radius: 70px 0 70px 0;
+    box-shadow: -10px 10px 30px black;
+    background-color: black;
+    opacity: 50%;
+    transform: scale(0);
+    transition: all 1s ease;
+    text-align: center;
+    line-height: 500px;
+}
+#mask h5{
+    padding: 100px;
+    color: white;
+}
+#my-text{
+    padding: 40px;
+    margin-top: 70px;
+}
+
+
+#images{
+    height: 350px;
+    background-color: rgba(91,65,33,0.3);
+    line-height: 350px;
+}
+
+.flip-card{
+    background-color: transparent;
+    perspective: 1000px;
+    margin: 20px;
+    height: 300px;
+    line-height: 50px;
+    width: 90%;
+    border-radius: 50%;
+}
+.flip-card .card{
+    background-color: transparent;
+    position: relative;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .card{
+    line-height: 50px;
+    background-color: transparent;
+    transform: rotateY(180deg);
+}
+.flip-card .card div{
+    background-color: transparent;
+    height: 300px;
+    width: 100%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+
+}
+.flip-card .card .back{
+    background-color: darkgray;
+    color: white;
+    transform: rotateY(180deg);
+
+}
+.flip-card .card .front{
+    background-color: transparent;
+    color: white;
+}
+.image{
+    height: 300px;
+    width: 100%;
+    line-height: 50px;
+    border-radius: 50%;
+    border: 2px solid darkgrey;
+    box-shadow: -10px 10px 10px darkgray;
+}
+.back .image{
+    opacity: 30%;
+}
+.back .text{
+    position: relative;
+    top: 20px;
+    line-height: 300px;
+    overflow: hidden;
+}
+.like{
+    display: none;
+    transform: scale(2);
+}
+.fa-heart{
+    transform: scale(2);
+}
+.fa-heart:hover{
+    cursor: pointer;
+}
+@-webkit-keyframes like {
+    0% {
+        transform: scale(2);
+    }
+    50% {
+        transform: scale(10);
+    }
+    100% {
+        transform: scale(2);
+        color: red;
+    }
+}
+@-webkit-keyframes dislike {
+    0% {
+        transform: scale(2);
+    }
+    50% {
+        transform: scale(10);
+    }
+    100% {
+        transform: scale(2);
+        color: white;
+    }
+}
+
+
+/*  Sec2  */
+#sec2{
+    background-image: url("../img/veg1.png");
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.carousel{
+    position: relative;
+    top: 15vh;
+    left: 15vw;
+    height: 70vh;
+    width: 70vw;
+    background-color: transparent;
+}
+.carousel-item img{
+    height: 70vh;
+    width: 70vw;
+    border-radius: 5%;
+    opacity: 90%;
+    border: 2px solid darkblue;
+}
+.pop{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: black;
+    opacity: 95%;
+    z-index: 34;
+}
+#close{
+    position: relative;
+    top: 80vh;
+    left: 30px;
+    font-size: 2em;
+    color: darkgray !important;
+}
+#close:hover{
+    color: white !important;
+    cursor: pointer;
+}
+.toggle{
+    position: absolute;
+    right: 20px;
+    top: 50vh;
+    z-index: 32;
+    transform: scale(2);
+}
+.toggle:hover{
+    color: darkgray;
+    cursor: pointer;
+}
+.chert{
+    color: transparent;
+    float: left;
+}
+
+/*sec3*/
+
+#sec3{
+    background-image: url("../img/friend.png");
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+#sec3 img{
+    width: 100%;
+    height: 250px;
+    border-radius: 5%;
+}
+#sec3 .card{
+    height: 90vh;
+    width: 80%;
+    box-shadow: -10px 10px 20px black;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.social-media a span{
+
+    transform: translateY(10px);
+    margin-left: 10px;
+    color: black;
+    transition: all 0.5s ease;
+}
+.social-media a:hover span{
+    text-decoration: none;
+    transform: translateY(-5px) scale(1.2);
+    color: darkblue;
+}
+.follow{
+    margin-top: 5px;
+    animation: tekon 2s ease-out infinite;
+    -webkit-animation: tekon 2s ease-out infinite;
+    -moz-animation: tekon 2s ease-out infinite;
+}
+@-webkit-keyframes tekon {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(50px);
+        color: red;
+    }
+    100% {
+        transform: translateX(0px);
+        color: blueviolet;
+    }
+}
+#add{
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 40vw;
+}
+#add > button{
+    margin-left: 5vw;
+}
+.modal-header h5{
+    text-align: center;
+    margin-left: 200px;
+}
+.modal-header button{
+    transition: all 0.5s ease-out;
+}
+.modal-header button:hover{
+    color: red;
+    transform: scale(1.5);
+}
+#be-friend-btn{
+    margin-top: 10px;
+}
+.must-be-filled{
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+#sec4{
+    text-align: center;
+    line-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/mar.png");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#sec4 h1{
+    font-size: 5em;
+    position: absolute;
+    top: 40vh;
+    left: 30vw;
+    animation: coming 2s ease-out infinite;
+    -webkit-animation: coming 2s ease-out infinite;
+    -moz-animation: coming 2s ease-out infinite;
+}
+#count-down-text{
+    position: absolute;
+    left: 37vw;
+    margin-top: 150px;
+    transform: scale(2);
+}
+@-webkit-keyframes coming {
+    0% {
+        transform: translateY(0);
+        color: black;
+    }
+    12.5% {
+        transform: translateY(-80px);
+        color: blueviolet;
+    }
+    25%{
+        transform: translateY(80px);
+        color: darkred;
+    }
+    37.5% {
+        transform: translateY(0);
+        color: black;
+    }
+    50%{
+        transform: translateX(0);
+        color: black;
+    }
+    67.5%{
+        transform: translateX(40px);
+        color: darkred;
+    }
+    75%{
+        transform: translateX(0);
+        color: black;
+    }
+    87.5%{
+        transform: translateX(-40px);
+        color: blueviolet;
+    }
+    100%{
+        transform: translateX(0);
+        color: black;
+    }
+}
+#go-to-top{
+    font-size: 2em;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    transition: all 0.4s ease-out;
+    display: none;
+}
+#go-to-top:hover{
+    color: black;
+    transform: scaleY(1.4);
+    cursor: pointer;
+}
+.pop{
+    color: white;
+    font-weight: bold;
+}
